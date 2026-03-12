@@ -1,0 +1,176 @@
+body{
+margin:0;
+font-family:"Comic Sans MS";
+text-align:center;
+background:linear-gradient(135deg,#5e2b97,#a66cff,#e4c1ff);
+color:white;
+overflow-x:hidden;
+}
+
+/* estrelas */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.3;
+animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.2;}
+to{opacity:0.6;}
+}
+
+/* titulo */
+
+.titulo{
+margin-top:40px;
+font-size:40px;
+}
+
+/* playland */
+
+.playland{
+width:420px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* contador */
+
+#contador{
+font-size:26px;
+margin-top:20px;
+}
+
+/* texto */
+
+.textinho{
+max-width:700px;
+margin:auto;
+margin-top:20px;
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:20px;
+}
+
+/* hello kitty */
+
+.kitty{
+position:fixed;
+bottom:30px;
+right:30px;
+width:80px;
+animation:float 3s infinite ease-in-out;
+}
+
+.kitty2{
+position:fixed;
+top:20px;
+left:20px;
+width:80px;
+animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* envelope 3D */
+
+.envelope{
+position:relative;
+width:220px;
+height:150px;
+margin:60px auto;
+perspective:1000px;
+cursor:pointer;
+}
+
+.body{
+background:#b266ff;
+width:100%;
+height:100%;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:50px;
+}
+
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:75px;
+background:#9b4dff;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:transform 0.8s;
+}
+
+.envelope.aberto .flap{
+transform:rotateX(180deg);
+}
+
+/* carta */
+
+.letter{
+display:none;
+background:white;
+color:black;
+padding:30px;
+border-radius:20px;
+max-width:800px;
+margin:40px auto;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0; transform:scale(0.9);}
+to{opacity:1; transform:scale(1);}
+}
+
+/* foto */
+
+.foto{
+width:420px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* texto carta */
+
+.texto{
+max-width:800px;
+margin:auto;
+margin-top:20px;
+line-height:1.6;
+}
+
+/* coracoes */
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:subir 3s linear;
+}
+
+@keyframes subir{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-500px);
+opacity:0;
+}
+}
